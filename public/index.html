@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Merch Closet</title>
+
+    <style>
+        /* ========== GLOBAL STYLES ========== */
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #fafafa;
+            color: #2b2b2b;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        /* ========== HERO / TOP IMAGE ========== */
+        .hero {
+            width: 100%;
+            height: 65vh;
+            background-image: url("images/BidDay25.jpg"); 
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.45);
+            padding: 30px 50px;
+            border-radius: 8px;
+        }
+
+        .hero-overlay h1 {
+            color: #ffffff;
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        /* ========== SECTION HEADER ========== */
+        .section-title {
+            margin: 60px 0 30px;
+            font-size: 2.5rem;
+            color: #6b1f2a;
+        }
+
+        /* ========== MERCH GRID - FIXED ========== */
+        .merch-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 30px;
+            padding: 0 40px 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* ========== MERCH CARD ========== */
+        .merch-card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            min-height: 500px;
+        }
+
+        /* Image container allows us to add arrows on top */
+        .image-container {
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+            background-color: #f2f2f2;
+            flex-shrink: 0;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+
+        /* Left & Right arrows for flipping images */
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            font-size: 1.5rem;
+            padding: 10px 14px;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .arrow.left { left: 10px; }
+        .arrow.right { right: 10px; }
+
+        /* ========== MERCH INFO ========== */
+        .merch-info {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .merch-info h3 {
+            margin-top: 0;
+            color: #6b1f2a;
+        }
+
+        .price {
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        /* Dropdown for sizes */
+        select {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+        }
+
+        .merch-info p:last-of-type {
+            margin-top: auto;
+        }
+
+        /* Responsive design */
+        @media (max-width: 900px) {
+            .merch-grid {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 0 20px 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .merch-grid {
+                grid-template-columns: 1fr;
+                padding: 0 20px 40px;
+            }
+            
+            .hero-overlay h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+                margin: 40px 0 20px;
+            }
+        }
+
+        /* ========== FOOTER ========== */
+        footer {
+            background-color: #6b1f2a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========== HERO SECTION ========== -->
+    <div class="hero">
+        <div class="hero-overlay">
+            <h1>Merch Closet</h1>
+        </div>
+    </div>
+
+    <!-- ========== MERCH SECTION TITLE ========== -->
+    <h2 class="section-title">Available Merch</h2>
+
+    <!-- ========== MERCH GRID ========== -->
+    <div class="merch-grid">
+
+        <!-- ===== MERCH ITEM #1 ===== -->
+        <div class="merch-card" data-images='["images/ballFront.png", "images/ballBack.png"]'>
+            <div class="image-container">
+                <img src="images/ballFront.png" alt="Orchid Ball Tee" />
+                <button class="arrow left">&#8592;</button>
+                <button class="arrow right">&#8594;</button>
+            </div>
+
+            <div class="merch-info">
+                <h3>Orchid Ball Tee</h3>
+                <p class="price">$20</p>
+
+                <select>
+                    <option disabled selected>Sizes Available</option>
+                    <option>S (1 available)</option>
+                </select>
+
+                <p>
+                    2023 Orchid Ball Comfort Colors Pocket T-shirt
+                    Ivory color with blue lettering and blue formal dance design on back.
+                </p>
+            </div>
+        </div>
+
+        <!-- ===== MERCH ITEM #2 ===== -->
+        <div class="merch-card" data-images='["images/beach.png"]'>
+            <div class="image-container">
+                <img src="images/beach.png" alt="Beach Tee" />
+            </div>
+
+            <div class="merch-info">
+                <h3>Beach Bid Day Tee</h3>
+                <p class="price">$20</p>
+
+                <select>
+                    <option disabled selected>Sizes Available</option>
+                    <option>L (5 available)</option>
+                    <option>2XL (1 available)</option>
+                </select>
+
+                <p>
+                    Pink Beach Fall 2024 Bid Day Comfort Colors Tee.
+                    Features a fun beach design with palm trees and the sunset.
+                </p>
+            </div>
+        </div>
+
+        <!-- ===== MERCH ITEM #3 ===== -->
+        <div class="merch-card" data-images='["images/buttons.png"]'>
+            <div class="image-container">
+                <img src="images/buttons.png" alt="Buttons Tee" />
+            </div>
+
+            <div class="merch-info">
+                <h3>Phi Rho Quarter Button</h3>
+                <p class="price">$10</p>
+
+                <select>
+                    <option disabled selected>Sizes Available</option>
+                    <option>S (4 available)</option>
+                </select>
+
+                <p>
+                    Black and white quarter button T-shirt.
+                    Features the Phi Rho and Est date.
+                </p>
+            </div>
+        </div>
+
+        <!-- ===== MERCH ITEM #4 ===== -->
+        <div class="merch-card" data-images='["images/flowers.png"]'>
+            <div class="image-container">
+                <img src="images/flowers.png" alt="Flowers Tee" />
+            </div>
+
+            <div class="merch-info">
+                <h3>Golden Brown Bid Day Tee</h3>
+                <p class="price">$20</p>
+
+                <select>
+                    <option disabled selected>Sizes Available</option>
+                    <option>M (1 available)</option>
+                    <option>2XL (1 available)</option>
+                </select>
+
+                <p>
+                    Golden Brown Spring 2025 Bid Day Tee.
+                    Features a bouquet of flowers.
+                </p>
+            </div>
+        </div>
+
+        <!-- ===== MERCH ITEM #5 ===== -->
+        <div class="merch-card" data-images='["images/frozen.png"]'>
+            <div class="image-container">
+                <img src="images/frozen.png" alt="Frozen Tee" />
+            </div>
+
+            <div class="merch-info">
+                <h3>Frosty Slouchy T-Shirt</h3>
+                <p class="price">$15</p>
+
+                <select>
+                    <option disabled selected>Sizes Available</option>
+                    <option>S (1 available)</option>
+                    <option>M (4 available)</option>
+                    <option>L (2 available)</option>
+                    <option>XL (1 available)</option>
+                </select>
+
+                <p>
+                    White Frosty Slouchy T-shirt. This is a hanging off shoulder shirt.
+                    Features a cute frozen-themed design with Phi Rho.
+                </p>
+            </div>
+        </div>
+
+        <!-- ===== MERCH ITEM #6 ===== -->
+        <div class="merch-card" data-images='["images/galaxyPin.png"]'>
+            <div class="image-container">
+                <img src="images/galaxyPin.png" alt="Galaxy Pin" />
+            </div>
+
+            <div class="merch-info">
+                <h3>Galaxy Pin</h3>
+                <p class="price">$1</p>
+
+                <select>
+                    <option disabled selected>Available</option>
+                    <option>2 inch pin (8 available)</option>
+                </select>
+
+                <p>
+                    Galaxy-themed Phi Rho 2" pin.
+                </p>
+            </div>
+        </div>
+
+        <!-- ===== MERCH ITEM #7 ===== -->
+        <div class="merch-card" data-images='["images/indentedLetter.png", "images/HeatPress.png"]'>
+            <div class="image-container">
+                <img src="images/indentedLetter.png" alt="Heat Pressed Letters" />
+                <button class="arrow left">&#8592;</button>
+                <button class="arrow right">&#8594;</button>
+            </div>
+
+            <div class="merch-info">
+                <h3>Heat Pressed Letters</h3>
+                <p class="price">$15</p>
+
+                <select>
+                    <option disabled selected>Sizes Available</option>
+                    <option>S (1 available)</option>
+                </select>
+
+                <p>
+                    Pale blue Heat Pressed Letter T-shirt.
+                    Features indented Phi Rho letters on the front with "phi sigma rho" overlay.
+                </p>
+            </div>
+        </div>
+        
+        <!-- ===== MERCH ITEM #8 ===== -->
+        <div class="merch-card" data-images='["images/letterCrew.png"]'>
+            <div class="image-container">
+                <img src="images/letterCrew.png" alt="Letter Crewneck" />
+            </div>
+
+            <div class="merch-info">
+                <h3>Letter Crewneck</h3>
+                <p class="price">$20</p>
+
+                <select>
+                    <option disabled selected>Sizes Available</option>
+                    <option>S (3 available)</option>
+                    <option>M (3 available)</option>
+                    <option>L (11 available)</option>
+                    <option>XL (4 available)</option>
+                    <option>2XL (1 available)</option>
+                </select>
+
+                <p>
+                    Burgandy Red letter crewneck.
+                    Epsilon Chapter University of Kentucky text on front.
+                </p>
+            </div>
+        </div>
+
+        <!-- ===== MERCH ITEM #9 NEED TO CHECK SIZE ===== -->
+        <div class="merch-card" data-images='["images/NASAFront.png", "images/NASABack.png"]'>
+            <div class="image-container">
+                <img src="images/NASAFront.png" alt="NASA Front" />
+                <button class="arrow left">&#8592;</button>
+                <button class="arrow right">&#8594;</button>
+            </div>
+
+            <div class="merch-info">
+                <h3>NASA Bowlathon Shirt</h3>
+                <p class="price">$10</p>
+
+                <select>
+                    <option disabled selected>Sizes Available</option>
+                    <option>S (1 available)</option> 
+                </select>
+
+                <p>
+                    NASA Bowlathon T-shirt, Strike Cancer Out of this world.
+                </p>
+            </div>
+        </div>
+        
+        <!-- ===== MERCH ITEM #10 ===== -->
+        <div class="merch-card" data-images='["images/neonBowlFront.png", "images/neonBowlBack.png"]'>
+            <div class="image-container">
+                <img src="images/neonBowlFront.png" alt="Neon Front" />
+                <button class="arrow left">&#8592;</button>
+                <button class="arrow right">&#8594;</button>
+            </div>
+
+            <div class="merch-info">
+                <h3>Neon Bowlathon Shirt</h3>
+                <p class="price">$10</p>
+
+                <select>
+                    <option disabled selected>Sizes Available</option>
+                    <option>S (4 available)</option> 
+                </select>
+
+                <p>
+                    Neon Bowlathon T-shirt, Strike out Cancer.
+                </p>
+            </div>
+        </div>
+
+        <!-- ===== MERCH ITEM #11 ===== -->
+        <div class="merch-card" data-images='["images/PhiRhoOff.png"]'>
+            <div class="image-container">
+                <img src="images/PhiRhoOff.png" alt="Phi Rho Off Shoulder" />
+            </div>
+
+            <div class="merch-info">
+                <h3>Phi Rho Slouchy T-shirt</h3>
+                <p class="price">$15</p>
+
+                <select>
+                    <option disabled selected>Sizes Available</option>
+                    <option>S (1 available)</option>
+                </select>
+
+                <p>
+                    White Phi Rho Slouchy T-shirt. This is a hanging off shoulder shirt.
+                    Features simple Phi Rho on the front in a pale orange.
+                </p>
+            </div>
+        </div>
+
+        <!-- ===== MERCH ITEM #12 ===== -->
+        <div class="merch-card" data-images='["images/pinkmelt.png"]'>
+            <div class="image-container">
+                <img src="images/pinkmelt.png" alt="Pink Melting Phi Rho" />
+            </div>
+
+            <div class="merch-info">
+                <h3>Cyan and Pink Melting Phi Rho Tee</h3>
+                <p class="price">$15</p>
+
+                <select>
+                    <option disabled selected>Sizes Available</option>
+                    <option>S (4 available)</option>
+                    <option>M (6 available)</option>
+                    <option>L (5 available)</option>
+                </select>
+
+                <p>
+                    Cyan and Pink Melting Phi Rho T-shirt.
+                </p>
+            </div>
+        </div>
+
+        <!-- ===== MERCH ITEM #13 ===== -->
+        <div class="merch-card" data-images='["images/Pix.png"]'>
+            <div class="image-container">
+                <img src="images/Pix.png" alt="Grand Pix Bid Day" />
+            </div>
+
+            <div class="merch-info">
+                <h3>Grand Pix Bid Day Tee</h3>
+                <p class="price">$20</p>
+
+                <select>
+                    <option disabled selected>Sizes Available</option>
+                    <option>S (1 available)</option>
+                    <option>XL (1 available)</option>
+                    <option>2XL (1 available)</option>
+                </select>
+
+                <p>
+                    Grand Pix Spring 2024 Bid Day Comfort Colors Tee.
+                    Features a fun racing-themed design with Sigmund waving out the car
+                </p>
+            </div>
+        </div>
+
+                <!-- ===== MERCH ITEM #14 ===== -->
+        <div class="merch-card" data-images='["images/planet.png"]'>
+            <div class="image-container">
+                <img src="images/planet.png" alt="Phi Rho World" />
+            </div>
+
+            <div class="merch-info">
+                <h3>Phi Rho World Tee</h3>
+                <p class="price">$20</p>
+
+                <select>
+                    <option disabled selected>Sizes Available</option>
+                    <option>M (4 available)</option>
+                    <option>XL (1 available)</option>
+                </select>
+
+                <p>
+                    Phi Rho World periwinkle and pink Comfort Colors Tee.
+                </p>
+            </div>
+        </div>
+
+        <!-- ===== MERCH ITEM #15 ===== -->
+        <div class="merch-card" data-images='["images/wavesBlue.png"]'>
+            <div class="image-container">
+                <img src="images/wavesBlue.png" alt="Blue Sea" />
+            </div>
+
+            <div class="merch-info">
+                <h3>Seas The Day Blue Slouchy T-shirt</h3>
+                <p class="price">$15</p>
+
+                <select>
+                    <option disabled selected>Sizes Available</option>
+                    <option>L (2 available)</option>
+                </select>
+
+                <p>
+                    Blue Seas The Day Slouchy T-shirt. This is a hanging off shoulder shirt.
+                </p>
+            </div>
+        </div>
+
+        <!-- ===== MERCH ITEM #16 ===== -->
+        <div class="merch-card" data-images='["images/wavesWhite.png"]'>
+            <div class="image-container">
+                <img src="images/wavesWhite.png" alt="White Sea" />
+            </div>
+
+            <div class="merch-info">
+                <h3>Seas The Day White Slouchy T-shirt</h3>
+                <p class="price">$15</p>
+
+                <select>
+                    <option disabled selected>Sizes Available</option>
+                    <option>L (4 available)</option>
+                    <option>XL (1 available)</option>
+                </select>
+
+                <p>
+                    White Seas The Day Slouchy T-shirt. This is a hanging off shoulder shirt.
+                </p>
+            </div>
+        </div>
+        
+         <!-- ===== MERCH ITEM #17 CHECK SIZE===== -->
+        <div class="merch-card" data-images='["images/xmasFront.png", "images/xmasback.png"]'>
+            <div class="image-container">
+                <img src="images/xmasFront.png" alt="Xmas Long Sleeve" />
+                <button class="arrow left">&#8592;</button>
+                <button class="arrow right">&#8594;</button>
+            </div>
+
+            <div class="merch-info">
+                <h3>Christmas Themed Long Sleeve</h3>
+                <p class="price">$15</p>
+
+                <select>
+                    <option disabled selected>Sizes Available</option>
+                    <option>S (4 available)</option> 
+                </select>
+
+                <p>
+                    Christmas Themed Comfort Colors Long Sleeve T-shirt.
+                    Features a festive Phi Rho design with holiday elements.
+                </p>
+            </div>
+        </div>
+    
+    </div>
+
+    <!-- ========== FOOTER ========== -->
+    <footer>
+        <p>
+            &copy; 2026 All Rights Reserved | Made by LayLa` Davis | Last Updated: <span id="lastUpdated"></span>
+        </p>
+    </footer>
+
+    <!-- ========== JAVASCRIPT ========== -->
+    <script>
+        /* Automatically insert today's date in the footer */
+        document.getElementById("lastUpdated").textContent = new Date().toLocaleDateString();
+
+        /* Handle image switching for each merch card */
+        document.querySelectorAll('.merch-card').forEach(card => {
+            const images = JSON.parse(card.dataset.images);
+            const imgTag = card.querySelector('img');
+            const leftArrow = card.querySelector('.arrow.left');
+            const rightArrow = card.querySelector('.arrow.right');
+            let currentIndex = 0;
+
+            // Only add arrows if there are multiple images
+            if (images.length > 1 && leftArrow && rightArrow) {
+                leftArrow.addEventListener('click', () => {
+                    currentIndex = (currentIndex - 1 + images.length) % images.length;
+                    imgTag.src = images[currentIndex];
+                });
+
+                rightArrow.addEventListener('click', () => {
+                    currentIndex = (currentIndex + 1) % images.length;
+                    imgTag.src = images[currentIndex];
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
