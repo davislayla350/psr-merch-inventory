@@ -263,7 +263,7 @@
             display: flex;
             flex-direction: column;
             height: 100%;
-            min-height: 520px;
+            min-height: 580px;
             transition: all 0.4s ease;
             position: relative;
             border: 1px solid var(--secondary-pink);
@@ -272,6 +272,13 @@
         .merch-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 20px 40px rgba(231, 84, 128, 0.25);
+        }
+
+        /* Purchase button styles */
+        .square-purchase-btn:hover {
+            background: #d43a7d !important;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(231, 84, 128, 0.4);
         }
 
         /* Favorite heart */
@@ -521,6 +528,12 @@
 
         <!-- ========== FILTER SECTION ========== -->
         <div class="filter-container">
+            <!-- Philanthropy Banner -->
+            <div style="background: linear-gradient(135deg, var(--primary-pink), #d43a7d); color: white; padding: 15px; border-radius: 15px; margin-bottom: 25px; text-align: center; border: 2px solid var(--accent-gold);">
+                <i class="fas fa-hands-helping" style="font-size: 1.5rem; margin-right: 10px;"></i>
+                <strong>100% of proceeds benefit our Philanthropy</strong> - Supporting meaningful causes through Phi Sigma Rho
+            </div>
+            
             <div class="filter-ribbon">
                 <i class="fas fa-filter"></i> Filter Collection
             </div>
@@ -589,797 +602,1041 @@
             </button>
         </div>
 
-    <!-- ========== MERCH GRID ========== -->
-    <div class="merch-grid">
+ <!-- ========== MERCH GRID ========== -->
+<div class="merch-grid">
 
-        <!-- ===== MERCH ITEM #1 ===== -->
-        <div class="merch-card" data-type="tee" data-sizes="S" data-images='["images/ballFront.png", "images/ballBack.png"]'>
-            <div class="favorite">
-                <i class="far fa-heart"></i>
-            </div>
-            <div class="image-container">
-                <img src="images/ballFront.png" alt="Orchid Ball Tee" />
-                <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
-                <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
-            </div>
-
-            <div class="merch-info">
-                <h3>Orchid Ball Tee</h3>
-                <div class="tags">
-                    <span class="item-tag">Tee</span>
-                    <span class="item-tag">Formal</span>
-                    <span class="item-tag">Comfort Colors</span>
-                </div>
-                <p class="price">$20</p>
-
-                <select>
-                    <option disabled selected>Select Size</option>
-                    <option>S (1 available)</option>
-                </select>
-
-                <p>
-                    2023 Orchid Ball Comfort Colors Pocket T-shirt. 
-                    Ivory color with blue lettering and blue formal dance design on back.
-                </p>
-            </div>
+    <!-- ===== MERCH ITEM #1 ===== -->
+    <div class="merch-card" data-type="tee" data-sizes="S" data-images='["images/ballFront.png", "images/ballBack.png"]'>
+        <div class="favorite">
+            <i class="far fa-heart"></i>
+        </div>
+        <div class="image-container">
+            <img src="images/ballFront.png" alt="Orchid Ball Tee" />
+            <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
+            <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
         </div>
 
-        <!-- ===== MERCH ITEM #2 ===== -->
-        <div class="merch-card" data-type="tee" data-sizes="S,L,2XL" data-images='["images/beach.png"]'>
-            <div class="favorite">
-                <i class="far fa-heart"></i>
+        <div class="merch-info">
+            <h3>Orchid Ball Tee</h3>
+            <div class="tags">
+                <span class="item-tag">Tee</span>
+                <span class="item-tag">Formal</span>
+                <span class="item-tag">Comfort Colors</span>
             </div>
-            <div class="image-container">
-                <img src="images/beach.png" alt="Beach Tee" />
-                <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
-                <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
-            </div>
+            <p class="price">$20</p>
 
-            <div class="merch-info">
-                <h3>Beach Bid Day Tee</h3>
-                <div class="tags">
-                    <span class="item-tag">Tee</span>
-                    <span class="item-tag">Bid Day</span>
-                    <span class="item-tag">Fall 2024</span>
-                </div>
-                <p class="price">$20</p>
+            <select>
+                <option disabled selected>Select Size</option>
+                <option>S (1 available)</option>
+            </select>
 
-                <select>
-                    <option disabled selected>Select Size</option>
-                    <option>S (1 available)</option>
-                    <option>L (5 available)</option>
-                    <option>2XL (1 available)</option>
-                </select>
-
-                <p>
-                    Pink Beach Fall 2024 Bid Day Comfort Colors Tee.
-                    Features a fun beach design with palm trees and the sunset.
+            <!-- Square Payment Section -->
+            <div class="purchase-section" style="margin-top: 15px; padding-top: 15px; border-top: 1px dashed var(--secondary-pink);">
+                <a href="https://longdogechallenge.com/" style="text-decoration: none;">
+                    <button class="square-purchase-btn" style="width: 100%; padding: 12px; background: var(--primary-pink); color: white; border: none; border-radius: 10px; font-weight: 600; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                        <i class="fas fa-shopping-cart"></i> Purchase via Square
+                    </button>
+                </a>
+                <p style="font-size: 0.8rem; color: var(--dark-text); text-align: center; margin-top: 8px;">
+                    <i class="fas fa-heart" style="color: var(--primary-pink);"></i> All proceeds support our philanthropy
                 </p>
             </div>
+
+            <p>
+                2023 Orchid Ball Comfort Colors Pocket T-shirt. 
+                Ivory color with blue lettering and blue formal dance design on back.
+            </p>
         </div>
-
-        <!-- ===== MERCH ITEM #3 ===== -->
-        <div class="merch-card" data-type="button" data-sizes="S,L" data-images='["images/buttons.png"]'>
-            <div class="favorite">
-                <i class="far fa-heart"></i>
-            </div>
-            <div class="image-container">
-                <img src="images/buttons.png" alt="Buttons Tee" />
-                <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
-                <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
-            </div>
-
-            <div class="merch-info">
-                <h3>Phi Rho Quarter Button</h3>
-                <div class="tags">
-                    <span class="item-tag">Button-up</span>
-                    <span class="item-tag">Classic</span>
-                    <span class="item-tag">Black & White</span>
-                </div>
-                <p class="price">$10</p>
-
-                <select>
-                    <option disabled selected>Select Size</option>
-                    <option>S (4 available)</option>
-                    <option>L (4 available)</option>
-                </select>
-
-                <p>
-                    Black and white quarter button T-shirt.
-                    Features the Phi Rho and Est date.
-                </p>
-            </div>
-        </div>
-
-        <!-- ===== MERCH ITEM #4 ===== -->
-        <div class="merch-card" data-type="tee" data-sizes="S,M,L,2XL" data-images='["images/flowers.png"]'>
-            <div class="favorite">
-                <i class="far fa-heart"></i>
-            </div>
-            <div class="image-container">
-                <img src="images/flowers.png" alt="Flowers Tee" />
-                <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
-                <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
-            </div>
-
-            <div class="merch-info">
-                <h3>Golden Brown Bid Day Tee</h3>
-                <div class="tags">
-                    <span class="item-tag">Tee</span>
-                    <span class="item-tag">Bid Day</span>
-                    <span class="item-tag">Spring 2025</span>
-                </div>
-                <p class="price">$20</p>
-
-                <select>
-                    <option disabled selected>Select Size</option>
-                    <option>S (1 available)</option>
-                    <option>M (1 available)</option>
-                    <option>L (1 available)</option>
-                    <option>2XL (1 available)</option>
-                </select>
-
-                <p>
-                    Golden Brown Spring 2025 Bid Day Tee.
-                    Features a beautiful bouquet of flowers design.
-                </p>
-            </div>
-        </div>
-
-        <!-- ===== MERCH ITEM #5 ===== -->
-        <div class="merch-card" data-type="slouchy" data-sizes="S,M,L,XL" data-images='["images/frozen.png"]'>
-            <div class="favorite">
-                <i class="far fa-heart"></i>
-            </div>
-            <div class="image-container">
-                <img src="images/frozen.png" alt="Frozen Tee" />
-                <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
-                <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
-            </div>
-
-            <div class="merch-info">
-                <h3>Frosty Slouchy T-Shirt</h3>
-                <div class="tags">
-                    <span class="item-tag">Slouchy Tee</span>
-                    <span class="item-tag">Off-Shoulder</span>
-                    <span class="item-tag">Comfy</span>
-                </div>
-                <p class="price">$15</p>
-
-                <select>
-                    <option disabled selected>Select Size</option>
-                    <option>S (1 available)</option>
-                    <option>M (5 available)</option>
-                    <option>L (2 available)</option>
-                    <option>XL (1 available)</option>
-                </select>
-
-                <p>
-                    White Frosty Slouchy T-shirt. This is a hanging off shoulder shirt.
-                    Features a cute frozen-themed design with Phi Rho.
-                </p>
-            </div>
-        </div>
-
-        <!-- ===== MERCH ITEM #6 ===== -->
-        <div class="merch-card" data-type="accessory" data-sizes="ONE" data-images='["images/GalaxyPin.png"]'>
-            <div class="favorite">
-                <i class="far fa-heart"></i>
-            </div>
-            <div class="image-container">
-                <img src="images/GalaxyPin.png" alt="Galaxy Pin" />
-                <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
-                <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
-            </div>
-            
-            <div class="merch-info">
-                <h3>Galaxy Pin</h3>
-                <div class="tags">
-                    <span class="item-tag">Accessory</span>
-                    <span class="item-tag">Pin</span>
-                    <span class="item-tag">Galaxy</span>
-                </div>
-                <p class="price">$1</p>
-
-                <select>
-                    <option disabled selected>Select Option</option>
-                    <option>2 inch pin (8 available)</option>
-                </select>
-
-                <p>
-                    Galaxy-themed Phi Rho 2" pin. Perfect for backpacks, jackets, or letters.
-                </p>
-            </div>
-        </div>
-
-        <!-- ===== MERCH ITEM #7 ===== -->
-        <div class="merch-card" data-type="tee" data-sizes="S,M" data-images='["images/indentedLetter.png", "images/HeatPress.png"]'>
-            <div class="favorite">
-                <i class="far fa-heart"></i>
-            </div>
-            <div class="image-container">
-                <img src="images/indentedLetter.png" alt="Heat Pressed Letters" />
-                <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
-                <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
-            </div>
-
-            <div class="merch-info">
-                <h3>Heat Pressed Letters</h3>
-                <div class="tags">
-                    <span class="item-tag">Tee</span>
-                    <span class="item-tag">Letters</span>
-                    <span class="item-tag">Pale Blue</span>
-                </div>
-                <p class="price">$15</p>
-
-                <select>
-                    <option disabled selected>Select Size</option>
-                    <option>S (1 available)</option>
-                    <option>M (1 available)</option>
-                </select>
-
-                <p>
-                    Pale blue Heat Pressed Letter T-shirt.
-                    Features indented Phi Rho letters on the front with "phi sigma rho" overlay.
-                </p>
-            </div>
-        </div>
-        
-        <!-- ===== MERCH ITEM #8 ===== -->
-        <div class="merch-card" data-type="crewneck" data-sizes="S,M,L,XL,2XL" data-images='["images/letterCrew.png"]'>
-            <div class="favorite">
-                <i class="far fa-heart"></i>
-            </div>
-            <div class="image-container">
-                <img src="images/letterCrew.png" alt="Letter Crewneck" />
-                <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
-                <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
-            </div>
-
-            <div class="merch-info">
-                <h3>Letter Crewneck</h3>
-                <div class="tags">
-                    <span class="item-tag">Crewneck</span>
-                    <span class="item-tag">Burgandy</span>
-                    <span class="item-tag">Warm</span>
-                </div>
-                <p class="price">$20</p>
-
-                <select>
-                    <option disabled selected>Select Size</option>
-                    <option>S (3 available)</option>
-                    <option>M (3 available)</option>
-                    <option>L (11 available)</option>
-                    <option>XL (4 available)</option>
-                    <option>2XL (1 available)</option>
-                </select>
-
-                <p>
-                    Burgandy Red letter crewneck.
-                    Epsilon Chapter University of Kentucky text on front.
-                </p>
-            </div>
-        </div>
-
-        <!-- ===== MERCH ITEM #9 ===== -->
-        <div class="merch-card" data-type="tee" data-sizes="M" data-images='["images/NASAFront.png", "images/NASABack.png"]'>
-            <div class="favorite">
-                <i class="far fa-heart"></i>
-            </div>
-            <div class="image-container">
-                <img src="images/NASAFront.png" alt="NASA Front" />
-                <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
-                <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
-            </div>
-
-            <div class="merch-info">
-                <h3>NASA Bowlathon Shirt</h3>
-                <div class="tags">
-                    <span class="item-tag">Tee</span>
-                    <span class="item-tag">Philanthropy</span>
-                    <span class="item-tag">NASA</span>
-                </div>
-                <p class="price">$10</p>
-
-                <select>
-                    <option disabled selected>Select Size</option>
-                    <option>M (1 available)</option> 
-                </select>
-
-                <p>
-                    NASA Bowlathon T-shirt, Strike Cancer Out of this world.
-                    Philanthropy event merchandise.
-                </p>
-            </div>
-        </div>
-        
-        <!-- ===== MERCH ITEM #10 ===== -->
-        <div class="merch-card" data-type="tee" data-sizes="S" data-images='["images/neonBowlFront.png", "images/neonBowlBack.png"]'>
-            <div class="favorite">
-                <i class="far fa-heart"></i>
-            </div>
-            <div class="image-container">
-                <img src="images/neonBowlFront.png" alt="Neon Front" />
-                <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
-                <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
-            </div>
-
-            <div class="merch-info">
-                <h3>Neon Bowlathon Shirt</h3>
-                <div class="tags">
-                    <span class="item-tag">Tee</span>
-                    <span class="item-tag">Philanthropy</span>
-                    <span class="item-tag">Neon</span>
-                </div>
-                <p class="price">$10</p>
-
-                <select>
-                    <option disabled selected>Select Size</option>
-                    <option>S (4 available)</option> 
-                </select>
-
-                <p>
-                    Neon Bowlathon T-shirt, Strike out Cancer.
-                    Bright neon design for philanthropy event.
-                </p>
-            </div>
-        </div>
-
-        <!-- ===== MERCH ITEM #11 ===== -->
-        <div class="merch-card" data-type="slouchy" data-sizes="S" data-images='["images/PhiRhoOff.png"]'>
-            <div class="favorite">
-                <i class="far fa-heart"></i>
-            </div>
-            <div class="image-container">
-                <img src="images/PhiRhoOff.png" alt="Phi Rho Off Shoulder" />
-                <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
-                <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
-            </div>
-
-            <div class="merch-info">
-                <h3>Phi Rho Slouchy T-shirt</h3>
-                <div class="tags">
-                    <span class="item-tag">Slouchy Tee</span>
-                    <span class="item-tag">Off-Shoulder</span>
-                    <span class="item-tag">Minimal</span>
-                </div>
-                <p class="price">$15</p>
-
-                <select>
-                    <option disabled selected>Select Size</option>
-                    <option>S (1 available)</option>
-                </select>
-
-                <p>
-                    White Phi Rho Slouchy T-shirt. This is a hanging off shoulder shirt.
-                    Features simple Phi Rho on the front in a pale orange.
-                </p>
-            </div>
-        </div>
-
-        <!-- ===== MERCH ITEM #12 ===== -->
-        <div class="merch-card" data-type="tee" data-sizes="S,M,L" data-images='["images/pinkmelt.png"]'>
-            <div class="favorite">
-                <i class="far fa-heart"></i>
-            </div>
-            <div class="image-container">
-                <img src="images/pinkmelt.png" alt="Pink Melting Phi Rho" />
-                <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
-                <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
-            </div>
-
-            <div class="merch-info">
-                <h3>Cyan & Pink Melting Phi Rho Tee</h3>
-                <div class="tags">
-                    <span class="item-tag">Tee</span>
-                    <span class="item-tag">Colorful</span>
-                    <span class="item-tag">Melting Design</span>
-                </div>
-                <p class="price">$15</p>
-
-                <select>
-                    <option disabled selected>Select Size</option>
-                    <option>S (4 available)</option>
-                    <option>M (6 available)</option>
-                    <option>L (5 available)</option>
-                </select>
-
-                <p>
-                    Cyan and Pink Melting Phi Rho T-shirt.
-                    Vibrant colors with a unique melting letters design.
-                </p>
-            </div>
-        </div>
-
-        <!-- ===== MERCH ITEM #13 ===== -->
-        <div class="merch-card" data-type="tee" data-sizes="S,XL,2XL" data-images='["images/Pix.png"]'>
-            <div class="favorite">
-                <i class="far fa-heart"></i>
-            </div>
-            <div class="image-container">
-                <img src="images/Pix.png" alt="Grand Pix Bid Day" />
-                <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
-                <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
-            </div>
-
-            <div class="merch-info">
-                <h3>Grand Pix Bid Day Tee</h3>
-                <div class="tags">
-                    <span class="item-tag">Tee</span>
-                    <span class="item-tag">Bid Day</span>
-                    <span class="item-tag">Spring 2024</span>
-                </div>
-                <p class="price">$20</p>
-
-                <select>
-                    <option disabled selected>Select Size</option>
-                    <option>S (1 available)</option>
-                    <option>XL (1 available)</option>
-                    <option>2XL (1 available)</option>
-                </select>
-
-                <p>
-                    Grand Pix Spring 2024 Bid Day Comfort Colors Tee.
-                    Features a fun racing-themed design with Sigmund waving out the car.
-                </p>
-            </div>
-        </div>
-
-        <!-- ===== MERCH ITEM #14 ===== -->
-        <div class="merch-card" data-type="tee" data-sizes="L,XL" data-images='["images/planet.png"]'>
-            <div class="favorite">
-                <i class="far fa-heart"></i>
-            </div>
-            <div class="image-container">
-                <img src="images/planet.png" alt="Phi Rho World" />
-                <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
-                <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
-            </div>
-
-            <div class="merch-info">
-                <h3>Phi Rho Planet Tee</h3>
-                <div class="tags">
-                    <span class="item-tag">Tee</span>
-                    <span class="item-tag">Space</span>
-                    <span class="item-tag">Periwinkle</span>
-                </div>
-                <p class="price">$20</p>
-
-                <select>
-                    <option disabled selected>Select Size</option>
-                    <option>L (5 available)</option>
-                    <option>XL (1 available)</option>
-                </select>
-
-                <p>
-                    Phi Rho Planet periwinkle and pink Comfort Colors Tee.
-                    Cosmic design with planets and stars.
-                </p>
-            </div>
-        </div>
-
-        <!-- ===== MERCH ITEM #15 ===== -->
-        <div class="merch-card" data-type="slouchy" data-sizes="L" data-images='["images/wavesBlue.png"]'>
-            <div class="favorite">
-                <i class="far fa-heart"></i>
-            </div>
-            <div class="image-container">
-                <img src="images/wavesBlue.png" alt="Blue Sea" />
-                <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
-                <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
-            </div>
-
-            <div class="merch-info">
-                <h3>Seas The Day Blue Slouchy</h3>
-                <div class="tags">
-                    <span class="item-tag">Slouchy Tee</span>
-                    <span class="item-tag">Off-Shoulder</span>
-                    <span class="item-tag">Beach</span>
-                </div>
-                <p class="price">$15</p>
-
-                <select>
-                    <option disabled selected>Select Size</option>
-                    <option>L (2 available)</option>
-                </select>
-
-                <p>
-                    Blue Seas The Day Slouchy T-shirt. This is a hanging off shoulder shirt.
-                    Perfect for beach days and summer vibes.
-                </p>
-            </div>
-        </div>
-
-        <!-- ===== MERCH ITEM #16 ===== -->
-        <div class="merch-card" data-type="slouchy" data-sizes="L" data-images='["images/wavesWhite.png"]'>
-            <div class="favorite">
-                <i class="far fa-heart"></i>
-            </div>
-            <div class="image-container">
-                <img src="images/wavesWhite.png" alt="White Sea" />
-                <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
-                <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
-            </div>
-
-            <div class="merch-info">
-                <h3>Seas The Day White Slouchy</h3>
-                <div class="tags">
-                    <span class="item-tag">Slouchy Tee</span>
-                    <span class="item-tag">Off-Shoulder</span>
-                    <span class="item-tag">Summer</span>
-                </div>
-                <p class="price">$15</p>
-
-                <select>
-                    <option disabled selected>Select Size</option>
-                    <option>L (4 available)</option>
-                </select>
-
-                <p>
-                    White Seas The Day Slouchy T-shirt. This is a hanging off shoulder shirt.
-                    Crisp white with beachy wave design.
-                </p>
-            </div>
-        </div>
-        
-        <!-- ===== MERCH ITEM #17 ===== -->
-        <div class="merch-card" data-type="longsleeve" data-sizes="M" data-images='["images/xmasFront.png", "images/xmasback.png"]'>
-            <div class="favorite">
-                <i class="far fa-heart"></i>
-            </div>
-            <div class="image-container">
-                <img src="images/xmasFront.png" alt="Xmas Long Sleeve" />
-                <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
-                <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
-            </div>
-
-            <div class="merch-info">
-                <h3>Christmas Themed Long Sleeve</h3>
-                <div class="tags">
-                    <span class="item-tag">Long Sleeve</span>
-                    <span class="item-tag">Holiday</span>
-                    <span class="item-tag">Festive</span>
-                </div>
-                <p class="price">$15</p>
-
-                <select>
-                    <option disabled selected>Select Size</option>
-                    <option>M (1 available)</option> 
-                </select>
-
-                <p>
-                    Christmas Themed Comfort Colors Long Sleeve T-shirt.
-                    Features a festive Phi Rho design with holiday elements.
-                </p>
-            </div>
-        </div>
-
-        <!-- ===== MERCH ITEM #18 ===== -->
-        <div class="merch-card" data-type="tee" data-sizes="M" data-images='["images/2017.png", "images/2017back.png"]'>
-            <div class="favorite">
-                <i class="far fa-heart"></i>
-            </div>
-            <div class="image-container">
-                <img src="images/2017.png" alt="Butter Flower Tee" />
-                <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
-                <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
-            </div>
-
-            <div class="merch-info">
-                <h3>Butter Yellow Flower Tee</h3>
-                <div class="tags">
-                    <span class="item-tag">Tee</span>
-                    <span class="item-tag">Vintage</span>
-                    <span class="item-tag">2017</span>
-                </div>
-                <p class="price">$20</p>
-
-                <select>
-                    <option disabled selected>Select Size</option>
-                    <option>M (1 available)</option>
-                </select>
-
-                <p>
-                    2017 Butter Yellow Comfort Colors T-shirt.
-                    Flower Wreath design on the back with Phi Rho motto.
-                </p>
-            </div>
-        </div>
-    
-        <!-- ===== MERCH ITEM #19 ===== -->
-        <div class="merch-card" data-type="tee" data-sizes="M" data-images='["images/orchidFront.png", "images/orchidBack.png"]'>
-            <div class="favorite">
-                <i class="far fa-heart"></i>
-            </div>
-            <div class="image-container">
-                <img src="images/orchidFront.png" alt="Orchid Tee" />
-                <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
-                <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
-            </div>
-
-            <div class="merch-info">
-                <h3>Periwinkle Orchid Tee</h3>
-                <div class="tags">
-                    <span class="item-tag">Tee</span>
-                    <span class="item-tag">Floral</span>
-                    <span class="item-tag">Periwinkle</span>
-                </div>
-                <p class="price">$20</p>
-
-                <select>
-                    <option disabled selected>Select Size</option>
-                    <option>M (1 available)</option>
-                </select>
-
-                <p>
-                    Periwinkle Orchid Comfort Colors T-shirt.
-                    Beautiful orchid design on pocket and elegant back design.
-                </p>
-            </div>
-        </div>
-
-        <!-- ===== MERCH ITEM #20 ===== -->
-        <div class="merch-card" data-type="tee" data-sizes="M" data-images='["images/AroundWorld.png"]'>
-            <div class="favorite">
-                <i class="far fa-heart"></i>
-            </div>
-            <div class="image-container">
-                <img src="images/AroundWorld.png" alt="Around the World Tee" />
-                <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
-                <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
-            </div>
-
-            <div class="merch-info">
-                <h3>Phi Rho Around the World</h3>
-                <div class="tags">
-                    <span class="item-tag">Tee</span>
-                    <span class="item-tag">Formal</span>
-                    <span class="item-tag">2018</span>
-                </div>
-                <p class="price">$15</p>
-
-                <select>
-                    <option disabled selected>Select Size</option>
-                    <option>M (1 available)</option>
-                </select>
-
-                <p>
-                    2018 Formal Around the World Comfort Colors T-shirt.
-                    Travel-themed design with worldly elements.
-                </p>
-            </div>
-        </div>
-
-        <!-- ===== MERCH ITEM #21 ===== -->
-        <div class="merch-card" data-type="crewneck" data-sizes="M" data-images='["images/KYcrew.png"]'>
-            <div class="favorite">
-                <i class="far fa-heart"></i>
-            </div>
-            <div class="image-container">
-                <img src="images/KYcrew.png" alt="KY Crewneck" />
-                <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
-                <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
-            </div>
-
-            <div class="merch-info">
-                <h3>KY State Crewneck</h3>
-                <div class="tags">
-                    <span class="item-tag">Crewneck</span>
-                    <span class="item-tag">Kentucky</span>
-                    <span class="item-tag">Green</span>
-                </div>
-                <p class="price">$20</p>
-
-                <select>
-                    <option disabled selected>Select Size</option>
-                    <option>M (1 available)</option>
-                </select>
-
-                <p>
-                    Green Kentucky Outline Crewneck.
-                    Show your state pride with this Kentucky-shaped design.
-                </p>
-            </div>
-        </div>
-
-        <!-- ===== MERCH ITEM #22 ===== -->
-        <div class="merch-card" data-type="crewneck" data-sizes="M" data-images='["images/penguin.png"]'>
-            <div class="favorite">
-                <i class="far fa-heart"></i>
-            </div>
-            <div class="image-container">
-                <img src="images/penguin.png" alt="Penguin Crewneck" />
-                <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
-                <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
-            </div>
-
-            <div class="merch-info">
-                <h3>Embroidered Penguin Crewneck</h3>
-                <div class="tags">
-                    <span class="item-tag">Crewneck</span>
-                    <span class="item-tag">Embroidered</span>
-                    <span class="item-tag">Premium</span>
-                </div>
-                <p class="price">$35</p>
-
-                <select>
-                    <option disabled selected>Select Size</option>
-                    <option>M (1 available)</option>
-                </select>
-
-                <p>
-                    Embroidered Sand Penguins Crewneck Sweatshirt.
-                    High-quality embroidery with cute penguin design.
-                </p>
-            </div>
-        </div>
-
-        <!-- ===== MERCH ITEM #23 ===== -->
-        <div class="merch-card" data-type="crewneck" data-sizes="M" data-images='["images/phiRainbow.png"]'>
-            <div class="favorite">
-                <i class="far fa-heart"></i>
-            </div>
-            <div class="image-container">
-                <img src="images/phiRainbow.png" alt="Phi Rho Rainbow Lines Crewneck" />
-                <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
-                <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
-            </div>
-
-            <div class="merch-info">
-                <h3>Phi Rho Rainbow Crewneck</h3>
-                <div class="tags">
-                    <span class="item-tag">Crewneck</span>
-                    <span class="item-tag">Colorful</span>
-                    <span class="item-tag">Rainbow</span>
-                </div>
-                <p class="price">$20</p>
-
-                <select>
-                    <option disabled selected>Select Size</option>
-                    <option>M (1 available)</option>
-                </select>
-
-                <p>
-                    White Phi Rho Crewneck with multicolored lines above.
-                    Bright rainbow accents on classic white crewneck.
-                </p>
-            </div>
-        </div>
-
-        <!-- ===== MERCH ITEM #24 ===== -->
-        <div class="merch-card" data-type="tee" data-sizes="M,L" data-images='["images/sparkleLetter.png"]'>
-            <div class="favorite">
-                <i class="far fa-heart"></i>
-            </div>
-            <div class="image-container">
-                <img src="images/sparkleLetter.png" alt="Sparkle Letter Phi Rho Tee" />
-                <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
-                <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
-            </div>
-
-            <div class="merch-info">
-                <h3>Sparkle Letter Phi Rho Tee</h3>
-                <div class="tags">
-                    <span class="item-tag">Tee</span>
-                    <span class="item-tag">Sparkle</span>
-                    <span class="item-tag">Applique</span>
-                </div>
-                <p class="price">$15</p>
-
-                <select>
-                    <option disabled selected>Select Size</option>
-                    <option>M (5 available)</option>
-                    <option>L (1 available)</option>
-                </select>
-
-                <p>
-                    Silver Sparkle Applique Letter Phi Rho T-shirt.
-                    Shimmery silver letters that catch the light beautifully.
-                </p>
-            </div>
-        </div>
-
     </div>
+
+    <!-- ===== MERCH ITEM #2 ===== -->
+    <div class="merch-card" data-type="tee" data-sizes="S,L,2XL" data-images='["images/beach.png"]'>
+        <div class="favorite">
+            <i class="far fa-heart"></i>
+        </div>
+        <div class="image-container">
+            <img src="images/beach.png" alt="Beach Tee" />
+            <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
+            <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
+        </div>
+
+        <div class="merch-info">
+            <h3>Beach Bid Day Tee</h3>
+            <div class="tags">
+                <span class="item-tag">Tee</span>
+                <span class="item-tag">Bid Day</span>
+                <span class="item-tag">Fall 2024</span>
+            </div>
+            <p class="price">$20</p>
+
+            <select>
+                <option disabled selected>Select Size</option>
+                <option>S (1 available)</option>
+                <option>L (5 available)</option>
+                <option>2XL (1 available)</option>
+            </select>
+
+            <!-- Square Payment Section -->
+            <div class="purchase-section" style="margin-top: 15px; padding-top: 15px; border-top: 1px dashed var(--secondary-pink);">
+                <a href="https://longdogechallenge.com/" style="text-decoration: none;">
+                    <button class="square-purchase-btn" style="width: 100%; padding: 12px; background: var(--primary-pink); color: white; border: none; border-radius: 10px; font-weight: 600; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                        <i class="fas fa-shopping-cart"></i> Purchase via Square
+                    </button>
+                </a>
+                <p style="font-size: 0.8rem; color: var(--dark-text); text-align: center; margin-top: 8px;">
+                    <i class="fas fa-heart" style="color: var(--primary-pink);"></i> All proceeds support our philanthropy
+                </p>
+            </div>
+
+            <p>
+                Pink Beach Fall 2024 Bid Day Comfort Colors Tee.
+                Features a fun beach design with palm trees and the sunset.
+            </p>
+        </div>
+    </div>
+
+    <!-- ===== MERCH ITEM #3 ===== -->
+    <div class="merch-card" data-type="button" data-sizes="S,L" data-images='["images/buttons.png"]'>
+        <div class="favorite">
+            <i class="far fa-heart"></i>
+        </div>
+        <div class="image-container">
+            <img src="images/buttons.png" alt="Buttons Tee" />
+            <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
+            <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
+        </div>
+
+        <div class="merch-info">
+            <h3>Phi Rho Quarter Button</h3>
+            <div class="tags">
+                <span class="item-tag">Button-up</span>
+                <span class="item-tag">Classic</span>
+                <span class="item-tag">Black & White</span>
+            </div>
+            <p class="price">$10</p>
+
+            <select>
+                <option disabled selected>Select Size</option>
+                <option>S (4 available)</option>
+                <option>L (4 available)</option>
+            </select>
+
+            <!-- Square Payment Section -->
+            <div class="purchase-section" style="margin-top: 15px; padding-top: 15px; border-top: 1px dashed var(--secondary-pink);">
+                <a href="https://longdogechallenge.com/" style="text-decoration: none;">
+                    <button class="square-purchase-btn" style="width: 100%; padding: 12px; background: var(--primary-pink); color: white; border: none; border-radius: 10px; font-weight: 600; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                        <i class="fas fa-shopping-cart"></i> Purchase via Square
+                    </button>
+                </a>
+                <p style="font-size: 0.8rem; color: var(--dark-text); text-align: center; margin-top: 8px;">
+                    <i class="fas fa-heart" style="color: var(--primary-pink);"></i> All proceeds support our philanthropy
+                </p>
+            </div>
+
+            <p>
+                Black and white quarter button T-shirt.
+                Features the Phi Rho and Est date.
+            </p>
+        </div>
+    </div>
+
+    <!-- ===== MERCH ITEM #4 ===== -->
+    <div class="merch-card" data-type="tee" data-sizes="S,M,L,2XL" data-images='["images/flowers.png"]'>
+        <div class="favorite">
+            <i class="far fa-heart"></i>
+        </div>
+        <div class="image-container">
+            <img src="images/flowers.png" alt="Flowers Tee" />
+            <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
+            <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
+        </div>
+
+        <div class="merch-info">
+            <h3>Golden Brown Bid Day Tee</h3>
+            <div class="tags">
+                <span class="item-tag">Tee</span>
+                <span class="item-tag">Bid Day</span>
+                <span class="item-tag">Spring 2025</span>
+            </div>
+            <p class="price">$20</p>
+
+            <select>
+                <option disabled selected>Select Size</option>
+                <option>S (1 available)</option>
+                <option>M (1 available)</option>
+                <option>L (1 available)</option>
+                <option>2XL (1 available)</option>
+            </select>
+
+            <!-- Square Payment Section -->
+            <div class="purchase-section" style="margin-top: 15px; padding-top: 15px; border-top: 1px dashed var(--secondary-pink);">
+                <a href="https://longdogechallenge.com/" style="text-decoration: none;">
+                    <button class="square-purchase-btn" style="width: 100%; padding: 12px; background: var(--primary-pink); color: white; border: none; border-radius: 10px; font-weight: 600; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                        <i class="fas fa-shopping-cart"></i> Purchase via Square
+                    </button>
+                </a>
+                <p style="font-size: 0.8rem; color: var(--dark-text); text-align: center; margin-top: 8px;">
+                    <i class="fas fa-heart" style="color: var(--primary-pink);"></i> All proceeds support our philanthropy
+                </p>
+            </div>
+
+            <p>
+                Golden Brown Spring 2025 Bid Day Tee.
+                Features a beautiful bouquet of flowers design.
+            </p>
+        </div>
+    </div>
+
+    <!-- ===== MERCH ITEM #5 ===== -->
+    <div class="merch-card" data-type="slouchy" data-sizes="S,M,L,XL" data-images='["images/frozen.png"]'>
+        <div class="favorite">
+            <i class="far fa-heart"></i>
+        </div>
+        <div class="image-container">
+            <img src="images/frozen.png" alt="Frozen Tee" />
+            <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
+            <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
+        </div>
+
+        <div class="merch-info">
+            <h3>Frosty Slouchy T-Shirt</h3>
+            <div class="tags">
+                <span class="item-tag">Slouchy Tee</span>
+                <span class="item-tag">Off-Shoulder</span>
+                <span class="item-tag">Comfy</span>
+            </div>
+            <p class="price">$15</p>
+
+            <select>
+                <option disabled selected>Select Size</option>
+                <option>S (1 available)</option>
+                <option>M (5 available)</option>
+                <option>L (2 available)</option>
+                <option>XL (1 available)</option>
+            </select>
+
+            <!-- Square Payment Section -->
+            <div class="purchase-section" style="margin-top: 15px; padding-top: 15px; border-top: 1px dashed var(--secondary-pink);">
+                <a href="https://longdogechallenge.com/" style="text-decoration: none;">
+                    <button class="square-purchase-btn" style="width: 100%; padding: 12px; background: var(--primary-pink); color: white; border: none; border-radius: 10px; font-weight: 600; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                        <i class="fas fa-shopping-cart"></i> Purchase via Square
+                    </button>
+                </a>
+                <p style="font-size: 0.8rem; color: var(--dark-text); text-align: center; margin-top: 8px;">
+                    <i class="fas fa-heart" style="color: var(--primary-pink);"></i> All proceeds support our philanthropy
+                </p>
+            </div>
+
+            <p>
+                White Frosty Slouchy T-shirt. This is a hanging off shoulder shirt.
+                Features a cute frozen-themed design with Phi Rho.
+            </p>
+        </div>
+    </div>
+
+    <!-- ===== MERCH ITEM #6 ===== -->
+    <div class="merch-card" data-type="accessory" data-sizes="ONE" data-images='["images/GalaxyPin.png"]'>
+        <div class="favorite">
+            <i class="far fa-heart"></i>
+        </div>
+        <div class="image-container">
+            <img src="images/GalaxyPin.png" alt="Galaxy Pin" />
+            <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
+            <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        
+        <div class="merch-info">
+            <h3>Galaxy Pin</h3>
+            <div class="tags">
+                <span class="item-tag">Accessory</span>
+                <span class="item-tag">Pin</span>
+                <span class="item-tag">Galaxy</span>
+            </div>
+            <p class="price">$1</p>
+
+            <select>
+                <option disabled selected>Select Option</option>
+                <option>2 inch pin (8 available)</option>
+            </select>
+
+            <!-- Square Payment Section -->
+            <div class="purchase-section" style="margin-top: 15px; padding-top: 15px; border-top: 1px dashed var(--secondary-pink);">
+                <a href="https://longdogechallenge.com/" style="text-decoration: none;">
+                    <button class="square-purchase-btn" style="width: 100%; padding: 12px; background: var(--primary-pink); color: white; border: none; border-radius: 10px; font-weight: 600; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                        <i class="fas fa-shopping-cart"></i> Purchase via Square
+                    </button>
+                </a>
+                <p style="font-size: 0.8rem; color: var(--dark-text); text-align: center; margin-top: 8px;">
+                    <i class="fas fa-heart" style="color: var(--primary-pink);"></i> All proceeds support our philanthropy
+                </p>
+            </div>
+
+            <p>
+                Galaxy-themed Phi Rho 2" pin. Perfect for backpacks, jackets, or letters.
+            </p>
+        </div>
+    </div>
+
+    <!-- ===== MERCH ITEM #7 ===== -->
+    <div class="merch-card" data-type="tee" data-sizes="S,M" data-images='["images/indentedLetter.png", "images/HeatPress.png"]'>
+        <div class="favorite">
+            <i class="far fa-heart"></i>
+        </div>
+        <div class="image-container">
+            <img src="images/indentedLetter.png" alt="Heat Pressed Letters" />
+            <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
+            <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
+        </div>
+
+        <div class="merch-info">
+            <h3>Heat Pressed Letters</h3>
+            <div class="tags">
+                <span class="item-tag">Tee</span>
+                <span class="item-tag">Letters</span>
+                <span class="item-tag">Pale Blue</span>
+            </div>
+            <p class="price">$15</p>
+
+            <select>
+                <option disabled selected>Select Size</option>
+                <option>S (1 available)</option>
+                <option>M (1 available)</option>
+            </select>
+
+            <!-- Square Payment Section -->
+            <div class="purchase-section" style="margin-top: 15px; padding-top: 15px; border-top: 1px dashed var(--secondary-pink);">
+                <a href="https://longdogechallenge.com/" style="text-decoration: none;">
+                    <button class="square-purchase-btn" style="width: 100%; padding: 12px; background: var(--primary-pink); color: white; border: none; border-radius: 10px; font-weight: 600; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                        <i class="fas fa-shopping-cart"></i> Purchase via Square
+                    </button>
+                </a>
+                <p style="font-size: 0.8rem; color: var(--dark-text); text-align: center; margin-top: 8px;">
+                    <i class="fas fa-heart" style="color: var(--primary-pink);"></i> All proceeds support our philanthropy
+                </p>
+            </div>
+
+            <p>
+                Pale blue Heat Pressed Letter T-shirt.
+                Features indented Phi Rho letters on the front with "phi sigma rho" overlay.
+            </p>
+        </div>
+    </div>
+    
+    <!-- ===== MERCH ITEM #8 ===== -->
+    <div class="merch-card" data-type="crewneck" data-sizes="S,M,L,XL,2XL" data-images='["images/letterCrew.png"]'>
+        <div class="favorite">
+            <i class="far fa-heart"></i>
+        </div>
+        <div class="image-container">
+            <img src="images/letterCrew.png" alt="Letter Crewneck" />
+            <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
+            <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
+        </div>
+
+        <div class="merch-info">
+            <h3>Letter Crewneck</h3>
+            <div class="tags">
+                <span class="item-tag">Crewneck</span>
+                <span class="item-tag">Burgandy</span>
+                <span class="item-tag">Warm</span>
+            </div>
+            <p class="price">$20</p>
+
+            <select>
+                <option disabled selected>Select Size</option>
+                <option>S (3 available)</option>
+                <option>M (3 available)</option>
+                <option>L (11 available)</option>
+                <option>XL (4 available)</option>
+                <option>2XL (1 available)</option>
+            </select>
+
+            <!-- Square Payment Section -->
+            <div class="purchase-section" style="margin-top: 15px; padding-top: 15px; border-top: 1px dashed var(--secondary-pink);">
+                <a href="https://longdogechallenge.com/" style="text-decoration: none;">
+                    <button class="square-purchase-btn" style="width: 100%; padding: 12px; background: var(--primary-pink); color: white; border: none; border-radius: 10px; font-weight: 600; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                        <i class="fas fa-shopping-cart"></i> Purchase via Square
+                    </button>
+                </a>
+                <p style="font-size: 0.8rem; color: var(--dark-text); text-align: center; margin-top: 8px;">
+                    <i class="fas fa-heart" style="color: var(--primary-pink);"></i> All proceeds support our philanthropy
+                </p>
+            </div>
+
+            <p>
+                Burgandy Red letter crewneck.
+                Epsilon Chapter University of Kentucky text on front.
+            </p>
+        </div>
+    </div>
+
+    <!-- ===== MERCH ITEM #9 ===== -->
+    <div class="merch-card" data-type="tee" data-sizes="M" data-images='["images/NASAFront.png", "images/NASABack.png"]'>
+        <div class="favorite">
+            <i class="far fa-heart"></i>
+        </div>
+        <div class="image-container">
+            <img src="images/NASAFront.png" alt="NASA Front" />
+            <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
+            <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
+        </div>
+
+        <div class="merch-info">
+            <h3>NASA Bowlathon Shirt</h3>
+            <div class="tags">
+                <span class="item-tag">Tee</span>
+                <span class="item-tag">Philanthropy</span>
+                <span class="item-tag">NASA</span>
+            </div>
+            <p class="price">$10</p>
+
+            <select>
+                <option disabled selected>Select Size</option>
+                <option>M (1 available)</option> 
+            </select>
+
+            <!-- Square Payment Section -->
+            <div class="purchase-section" style="margin-top: 15px; padding-top: 15px; border-top: 1px dashed var(--secondary-pink);">
+                <a href="https://longdogechallenge.com/" style="text-decoration: none;">
+                    <button class="square-purchase-btn" style="width: 100%; padding: 12px; background: var(--primary-pink); color: white; border: none; border-radius: 10px; font-weight: 600; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                        <i class="fas fa-shopping-cart"></i> Purchase via Square
+                    </button>
+                </a>
+                <p style="font-size: 0.8rem; color: var(--dark-text); text-align: center; margin-top: 8px;">
+                    <i class="fas fa-heart" style="color: var(--primary-pink);"></i> All proceeds support our philanthropy
+                </p>
+            </div>
+
+            <p>
+                NASA Bowlathon T-shirt, Strike Cancer Out of this world.
+                Philanthropy event merchandise.
+            </p>
+        </div>
+    </div>
+    
+    <!-- ===== MERCH ITEM #10 ===== -->
+    <div class="merch-card" data-type="tee" data-sizes="S" data-images='["images/neonBowlFront.png", "images/neonBowlBack.png"]'>
+        <div class="favorite">
+            <i class="far fa-heart"></i>
+        </div>
+        <div class="image-container">
+            <img src="images/neonBowlFront.png" alt="Neon Front" />
+            <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
+            <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
+        </div>
+
+        <div class="merch-info">
+            <h3>Neon Bowlathon Shirt</h3>
+            <div class="tags">
+                <span class="item-tag">Tee</span>
+                <span class="item-tag">Philanthropy</span>
+                <span class="item-tag">Neon</span>
+            </div>
+            <p class="price">$10</p>
+
+            <select>
+                <option disabled selected>Select Size</option>
+                <option>S (4 available)</option> 
+            </select>
+
+            <!-- Square Payment Section -->
+            <div class="purchase-section" style="margin-top: 15px; padding-top: 15px; border-top: 1px dashed var(--secondary-pink);">
+                <a href="https://longdogechallenge.com/" style="text-decoration: none;">
+                    <button class="square-purchase-btn" style="width: 100%; padding: 12px; background: var(--primary-pink); color: white; border: none; border-radius: 10px; font-weight: 600; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                        <i class="fas fa-shopping-cart"></i> Purchase via Square
+                    </button>
+                </a>
+                <p style="font-size: 0.8rem; color: var(--dark-text); text-align: center; margin-top: 8px;">
+                    <i class="fas fa-heart" style="color: var(--primary-pink);"></i> All proceeds support our philanthropy
+                </p>
+            </div>
+
+            <p>
+                Neon Bowlathon T-shirt, Strike out Cancer.
+                Bright neon design for philanthropy event.
+            </p>
+        </div>
+    </div>
+
+    <!-- ===== MERCH ITEM #11 ===== -->
+    <div class="merch-card" data-type="slouchy" data-sizes="S" data-images='["images/PhiRhoOff.png"]'>
+        <div class="favorite">
+            <i class="far fa-heart"></i>
+        </div>
+        <div class="image-container">
+            <img src="images/PhiRhoOff.png" alt="Phi Rho Off Shoulder" />
+            <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
+            <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
+        </div>
+
+        <div class="merch-info">
+            <h3>Phi Rho Slouchy T-shirt</h3>
+            <div class="tags">
+                <span class="item-tag">Slouchy Tee</span>
+                <span class="item-tag">Off-Shoulder</span>
+                <span class="item-tag">Minimal</span>
+            </div>
+            <p class="price">$15</p>
+
+            <select>
+                <option disabled selected>Select Size</option>
+                <option>S (1 available)</option>
+            </select>
+
+            <!-- Square Payment Section -->
+            <div class="purchase-section" style="margin-top: 15px; padding-top: 15px; border-top: 1px dashed var(--secondary-pink);">
+                <a href="https://longdogechallenge.com/" style="text-decoration: none;">
+                    <button class="square-purchase-btn" style="width: 100%; padding: 12px; background: var(--primary-pink); color: white; border: none; border-radius: 10px; font-weight: 600; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                        <i class="fas fa-shopping-cart"></i> Purchase via Square
+                    </button>
+                </a>
+                <p style="font-size: 0.8rem; color: var(--dark-text); text-align: center; margin-top: 8px;">
+                    <i class="fas fa-heart" style="color: var(--primary-pink);"></i> All proceeds support our philanthropy
+                </p>
+            </div>
+
+            <p>
+                White Phi Rho Slouchy T-shirt. This is a hanging off shoulder shirt.
+                Features simple Phi Rho on the front in a pale orange.
+            </p>
+        </div>
+    </div>
+
+    <!-- ===== MERCH ITEM #12 ===== -->
+    <div class="merch-card" data-type="tee" data-sizes="S,M,L" data-images='["images/pinkmelt.png"]'>
+        <div class="favorite">
+            <i class="far fa-heart"></i>
+        </div>
+        <div class="image-container">
+            <img src="images/pinkmelt.png" alt="Pink Melting Phi Rho" />
+            <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
+            <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
+        </div>
+
+        <div class="merch-info">
+            <h3>Cyan & Pink Melting Phi Rho Tee</h3>
+            <div class="tags">
+                <span class="item-tag">Tee</span>
+                <span class="item-tag">Colorful</span>
+                <span class="item-tag">Melting Design</span>
+            </div>
+            <p class="price">$15</p>
+
+            <select>
+                <option disabled selected>Select Size</option>
+                <option>S (4 available)</option>
+                <option>M (6 available)</option>
+                <option>L (5 available)</option>
+            </select>
+
+            <!-- Square Payment Section -->
+            <div class="purchase-section" style="margin-top: 15px; padding-top: 15px; border-top: 1px dashed var(--secondary-pink);">
+                <a href="https://longdogechallenge.com/" style="text-decoration: none;">
+                    <button class="square-purchase-btn" style="width: 100%; padding: 12px; background: var(--primary-pink); color: white; border: none; border-radius: 10px; font-weight: 600; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                        <i class="fas fa-shopping-cart"></i> Purchase via Square
+                    </button>
+                </a>
+                <p style="font-size: 0.8rem; color: var(--dark-text); text-align: center; margin-top: 8px;">
+                    <i class="fas fa-heart" style="color: var(--primary-pink);"></i> All proceeds support our philanthropy
+                </p>
+            </div>
+
+            <p>
+                Cyan and Pink Melting Phi Rho T-shirt.
+                Vibrant colors with a unique melting letters design.
+            </p>
+        </div>
+    </div>
+
+    <!-- ===== MERCH ITEM #13 ===== -->
+    <div class="merch-card" data-type="tee" data-sizes="S,XL,2XL" data-images='["images/Pix.png"]'>
+        <div class="favorite">
+            <i class="far fa-heart"></i>
+        </div>
+        <div class="image-container">
+            <img src="images/Pix.png" alt="Grand Pix Bid Day" />
+            <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
+            <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
+        </div>
+
+        <div class="merch-info">
+            <h3>Grand Pix Bid Day Tee</h3>
+            <div class="tags">
+                <span class="item-tag">Tee</span>
+                <span class="item-tag">Bid Day</span>
+                <span class="item-tag">Spring 2024</span>
+            </div>
+            <p class="price">$20</p>
+
+            <select>
+                <option disabled selected>Select Size</option>
+                <option>S (1 available)</option>
+                <option>XL (1 available)</option>
+                <option>2XL (1 available)</option>
+            </select>
+
+            <!-- Square Payment Section -->
+            <div class="purchase-section" style="margin-top: 15px; padding-top: 15px; border-top: 1px dashed var(--secondary-pink);">
+                <a href="https://longdogechallenge.com/" style="text-decoration: none;">
+                    <button class="square-purchase-btn" style="width: 100%; padding: 12px; background: var(--primary-pink); color: white; border: none; border-radius: 10px; font-weight: 600; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                        <i class="fas fa-shopping-cart"></i> Purchase via Square
+                    </button>
+                </a>
+                <p style="font-size: 0.8rem; color: var(--dark-text); text-align: center; margin-top: 8px;">
+                    <i class="fas fa-heart" style="color: var(--primary-pink);"></i> All proceeds support our philanthropy
+                </p>
+            </div>
+
+            <p>
+                Grand Pix Spring 2024 Bid Day Comfort Colors Tee.
+                Features a fun racing-themed design with Sigmund waving out the car.
+            </p>
+        </div>
+    </div>
+
+    <!-- ===== MERCH ITEM #14 ===== -->
+    <div class="merch-card" data-type="tee" data-sizes="L,XL" data-images='["images/planet.png"]'>
+        <div class="favorite">
+            <i class="far fa-heart"></i>
+        </div>
+        <div class="image-container">
+            <img src="images/planet.png" alt="Phi Rho World" />
+            <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
+            <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
+        </div>
+
+        <div class="merch-info">
+            <h3>Phi Rho Planet Tee</h3>
+            <div class="tags">
+                <span class="item-tag">Tee</span>
+                <span class="item-tag">Space</span>
+                <span class="item-tag">Periwinkle</span>
+            </div>
+            <p class="price">$20</p>
+
+            <select>
+                <option disabled selected>Select Size</option>
+                <option>L (5 available)</option>
+                <option>XL (1 available)</option>
+            </select>
+
+            <!-- Square Payment Section -->
+            <div class="purchase-section" style="margin-top: 15px; padding-top: 15px; border-top: 1px dashed var(--secondary-pink);">
+                <a href="https://longdogechallenge.com/" style="text-decoration: none;">
+                    <button class="square-purchase-btn" style="width: 100%; padding: 12px; background: var(--primary-pink); color: white; border: none; border-radius: 10px; font-weight: 600; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                        <i class="fas fa-shopping-cart"></i> Purchase via Square
+                    </button>
+                </a>
+                <p style="font-size: 0.8rem; color: var(--dark-text); text-align: center; margin-top: 8px;">
+                    <i class="fas fa-heart" style="color: var(--primary-pink);"></i> All proceeds support our philanthropy
+                </p>
+            </div>
+
+            <p>
+                Phi Rho Planet periwinkle and pink Comfort Colors Tee.
+                Cosmic design with planets and stars.
+            </p>
+        </div>
+    </div>
+
+    <!-- ===== MERCH ITEM #15 ===== -->
+    <div class="merch-card" data-type="slouchy" data-sizes="L" data-images='["images/wavesBlue.png"]'>
+        <div class="favorite">
+            <i class="far fa-heart"></i>
+        </div>
+        <div class="image-container">
+            <img src="images/wavesBlue.png" alt="Blue Sea" />
+            <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
+            <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
+        </div>
+
+        <div class="merch-info">
+            <h3>Seas The Day Blue Slouchy</h3>
+            <div class="tags">
+                <span class="item-tag">Slouchy Tee</span>
+                <span class="item-tag">Off-Shoulder</span>
+                <span class="item-tag">Beach</span>
+            </div>
+            <p class="price">$15</p>
+
+            <select>
+                <option disabled selected>Select Size</option>
+                <option>L (2 available)</option>
+            </select>
+
+            <!-- Square Payment Section -->
+            <div class="purchase-section" style="margin-top: 15px; padding-top: 15px; border-top: 1px dashed var(--secondary-pink);">
+                <a href="https://longdogechallenge.com/" style="text-decoration: none;">
+                    <button class="square-purchase-btn" style="width: 100%; padding: 12px; background: var(--primary-pink); color: white; border: none; border-radius: 10px; font-weight: 600; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                        <i class="fas fa-shopping-cart"></i> Purchase via Square
+                    </button>
+                </a>
+                <p style="font-size: 0.8rem; color: var(--dark-text); text-align: center; margin-top: 8px;">
+                    <i class="fas fa-heart" style="color: var(--primary-pink);"></i> All proceeds support our philanthropy
+                </p>
+            </div>
+
+            <p>
+                White Seas The Day Slouchy T-shirt. This is a hanging off shoulder shirt.
+                Crisp white with beachy wave design.
+            </p>
+        </div>
+    </div>
+
+    <!-- ===== MERCH ITEM #16 ===== -->
+    <div class="merch-card" data-type="slouchy" data-sizes="L" data-images='["images/wavesWhite.png"]'>
+        <div class="favorite">
+            <i class="far fa-heart"></i>
+        </div>
+        <div class="image-container">
+            <img src="images/wavesWhite.png" alt="White Sea" />
+            <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
+            <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
+        </div>
+
+        <div class="merch-info">
+            <h3>Seas The Day White Slouchy</h3>
+            <div class="tags">
+                <span class="item-tag">Slouchy Tee</span>
+                <span class="item-tag">Off-Shoulder</span>
+                <span class="item-tag">Summer</span>
+            </div>
+            <p class="price">$15</p>
+
+            <select>
+                <option disabled selected>Select Size</option>
+                <option>L (4 available)</option>
+            </select>
+
+            <!-- Square Payment Section -->
+            <div class="purchase-section" style="margin-top: 15px; padding-top: 15px; border-top: 1px dashed var(--secondary-pink);">
+                <a href="https://longdogechallenge.com/" style="text-decoration: none;">
+                    <button class="square-purchase-btn" style="width: 100%; padding: 12px; background: var(--primary-pink); color: white; border: none; border-radius: 10px; font-weight: 600; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                        <i class="fas fa-shopping-cart"></i> Purchase via Square
+                    </button>
+                </a>
+                <p style="font-size: 0.8rem; color: var(--dark-text); text-align: center; margin-top: 8px;">
+                    <i class="fas fa-heart" style="color: var(--primary-pink);"></i> All proceeds support our philanthropy
+                </p>
+            </div>
+
+            <p>
+                White Seas The Day Slouchy T-shirt. This is a hanging off shoulder shirt.
+                Crisp white with beachy wave design.
+            </p>
+        </div>
+    </div>
+    
+    <!-- ===== MERCH ITEM #17 ===== -->
+    <div class="merch-card" data-type="longsleeve" data-sizes="M" data-images='["images/xmasFront.png", "images/xmasback.png"]'>
+        <div class="favorite">
+            <i class="far fa-heart"></i>
+        </div>
+        <div class="image-container">
+            <img src="images/xmasFront.png" alt="Xmas Long Sleeve" />
+            <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
+            <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
+        </div>
+
+        <div class="merch-info">
+            <h3>Christmas Themed Long Sleeve</h3>
+            <div class="tags">
+                <span class="item-tag">Long Sleeve</span>
+                <span class="item-tag">Holiday</span>
+                <span class="item-tag">Festive</span>
+            </div>
+            <p class="price">$15</p>
+
+            <select>
+                <option disabled selected>Select Size</option>
+                <option>M (1 available)</option> 
+            </select>
+
+            <!-- Square Payment Section -->
+            <div class="purchase-section" style="margin-top: 15px; padding-top: 15px; border-top: 1px dashed var(--secondary-pink);">
+                <a href="https://longdogechallenge.com/" style="text-decoration: none;">
+                    <button class="square-purchase-btn" style="width: 100%; padding: 12px; background: var(--primary-pink); color: white; border: none; border-radius: 10px; font-weight: 600; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                        <i class="fas fa-shopping-cart"></i> Purchase via Square
+                    </button>
+                </a>
+                <p style="font-size: 0.8rem; color: var(--dark-text); text-align: center; margin-top: 8px;">
+                    <i class="fas fa-heart" style="color: var(--primary-pink);"></i> All proceeds support our philanthropy
+                </p>
+            </div>
+
+            <p>
+                Christmas Themed Comfort Colors Long Sleeve T-shirt.
+                Features a festive Phi Rho design with holiday elements.
+            </p>
+        </div>
+    </div>
+
+    <!-- ===== MERCH ITEM #18 ===== -->
+    <div class="merch-card" data-type="tee" data-sizes="M" data-images='["images/2017.png", "images/2017back.png"]'>
+        <div class="favorite">
+            <i class="far fa-heart"></i>
+        </div>
+        <div class="image-container">
+            <img src="images/2017.png" alt="Butter Flower Tee" />
+            <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
+            <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
+        </div>
+
+        <div class="merch-info">
+            <h3>Butter Yellow Flower Tee</h3>
+            <div class="tags">
+                <span class="item-tag">Tee</span>
+                <span class="item-tag">Vintage</span>
+                <span class="item-tag">2017</span>
+            </div>
+            <p class="price">$20</p>
+
+            <select>
+                <option disabled selected>Select Size</option>
+                <option>M (1 available)</option>
+            </select>
+
+            <!-- Square Payment Section -->
+            <div class="purchase-section" style="margin-top: 15px; padding-top: 15px; border-top: 1px dashed var(--secondary-pink);">
+                <a href="https://longdogechallenge.com/" style="text-decoration: none;">
+                    <button class="square-purchase-btn" style="width: 100%; padding: 12px; background: var(--primary-pink); color: white; border: none; border-radius: 10px; font-weight: 600; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                        <i class="fas fa-shopping-cart"></i> Purchase via Square
+                    </button>
+                </a>
+                <p style="font-size: 0.8rem; color: var(--dark-text); text-align: center; margin-top: 8px;">
+                    <i class="fas fa-heart" style="color: var(--primary-pink);"></i> All proceeds support our philanthropy
+                </p>
+            </div>
+
+            <p>
+                2017 Butter Yellow Comfort Colors T-shirt.
+                Flower Wreath design on the back with Phi Rho motto.
+            </p>
+        </div>
+    </div>
+
+    <!-- ===== MERCH ITEM #19 ===== -->
+    <div class="merch-card" data-type="tee" data-sizes="M" data-images='["images/orchidFront.png", "images/orchidBack.png"]'>
+        <div class="favorite">
+            <i class="far fa-heart"></i>
+        </div>
+        <div class="image-container">
+            <img src="images/orchidFront.png" alt="Orchid Tee" />
+            <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
+            <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
+        </div>
+
+        <div class="merch-info">
+            <h3>Periwinkle Orchid Tee</h3>
+            <div class="tags">
+                <span class="item-tag">Tee</span>
+                <span class="item-tag">Floral</span>
+                <span class="item-tag">Periwinkle</span>
+            </div>
+            <p class="price">$20</p>
+
+            <select>
+                <option disabled selected>Select Size</option>
+                <option>M (1 available)</option>
+            </select>
+
+            <!-- Square Payment Section -->
+            <div class="purchase-section" style="margin-top: 15px; padding-top: 15px; border-top: 1px dashed var(--secondary-pink);">
+                <a href="https://longdogechallenge.com/" style="text-decoration: none;">
+                    <button class="square-purchase-btn" style="width: 100%; padding: 12px; background: var(--primary-pink); color: white; border: none; border-radius: 10px; font-weight: 600; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                        <i class="fas fa-shopping-cart"></i> Purchase via Square
+                    </button>
+                </a>
+                <p style="font-size: 0.8rem; color: var(--dark-text); text-align: center; margin-top: 8px;">
+                    <i class="fas fa-heart" style="color: var(--primary-pink);"></i> All proceeds support our philanthropy
+                </p>
+            </div>
+
+            <p>
+                Periwinkle Orchid Comfort Colors T-shirt.
+                Beautiful orchid design on pocket and elegant back design.
+            </p>
+        </div>
+    </div>
+
+    <!-- ===== MERCH ITEM #20 ===== -->
+    <div class="merch-card" data-type="tee" data-sizes="M" data-images='["images/AroundWorld.png"]'>
+        <div class="favorite">
+            <i class="far fa-heart"></i>
+        </div>
+        <div class="image-container">
+            <img src="images/AroundWorld.png" alt="Around the World Tee" />
+            <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
+            <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
+        </div>
+
+        <div class="merch-info">
+            <h3>Phi Rho Around the World</h3>
+            <div class="tags">
+                <span class="item-tag">Tee</span>
+                <span class="item-tag">Formal</span>
+                <span class="item-tag">2018</span>
+            </div>
+            <p class="price">$15</p>
+
+            <select>
+                <option disabled selected>Select Size</option>
+                <option>M (1 available)</option>
+            </select>
+
+            <!-- Square Payment Section -->
+            <div class="purchase-section" style="margin-top: 15px; padding-top: 15px; border-top: 1px dashed var(--secondary-pink);">
+                <a href="https://longdogechallenge.com/" style="text-decoration: none;">
+                    <button class="square-purchase-btn" style="width: 100%; padding: 12px; background: var(--primary-pink); color: white; border: none; border-radius: 10px; font-weight: 600; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                        <i class="fas fa-shopping-cart"></i> Purchase via Square
+                    </button>
+                </a>
+                <p style="font-size: 0.8rem; color: var(--dark-text); text-align: center; margin-top: 8px;">
+                    <i class="fas fa-heart" style="color: var(--primary-pink);"></i> All proceeds support our philanthropy
+                </p>
+            </div>
+
+            <p>
+                2018 Formal Around the World Comfort Colors T-shirt.
+                Travel-themed design with worldly elements.
+            </p>
+        </div>
+    </div>
+
+    <!-- ===== MERCH ITEM #21 ===== -->
+    <div class="merch-card" data-type="crewneck" data-sizes="M" data-images='["images/penguin.png"]'>
+        <div class="favorite">
+            <i class="far fa-heart"></i>
+        </div>
+        <div class="image-container">
+            <img src="images/penguin.png" alt="Penguin Crewneck" />
+            <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
+            <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
+        </div>
+
+        <div class="merch-info">
+            <h3>Embroidered Penguin Crewneck</h3>
+            <div class="tags">
+                <span class="item-tag">Crewneck</span>
+                <span class="item-tag">Embroidered</span>
+                <span class="item-tag">Premium</span>
+            </div>
+            <p class="price">$35</p>
+
+            <select>
+                <option disabled selected>Select Size</option>
+                <option>M (1 available)</option>
+            </select>
+
+            <!-- Square Payment Section -->
+            <div class="purchase-section" style="margin-top: 15px; padding-top: 15px; border-top: 1px dashed var(--secondary-pink);">
+                <a href="https://longdogechallenge.com/" style="text-decoration: none;">
+                    <button class="square-purchase-btn" style="width: 100%; padding: 12px; background: var(--primary-pink); color: white; border: none; border-radius: 10px; font-weight: 600; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                        <i class="fas fa-shopping-cart"></i> Purchase via Square
+                    </button>
+                </a>
+                <p style="font-size: 0.8rem; color: var(--dark-text); text-align: center; margin-top: 8px;">
+                    <i class="fas fa-heart" style="color: var(--primary-pink);"></i> All proceeds support our philanthropy
+                </p>
+            </div>
+
+            <p>
+                Embroidered Sand Penguins Crewneck Sweatshirt.
+                High-quality embroidery with cute penguin design.
+            </p>
+        </div>
+    </div>
+
+    <!-- ===== MERCH ITEM #22 ===== -->
+    <div class="merch-card" data-type="crewneck" data-sizes="M" data-images='["images/phiRainbow.png"]'>
+        <div class="favorite">
+            <i class="far fa-heart"></i>
+        </div>
+        <div class="image-container">
+            <img src="images/phiRainbow.png" alt="Phi Rho Rainbow Lines Crewneck" />
+            <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
+            <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
+        </div>
+
+        <div class="merch-info">
+            <h3>Phi Rho Rainbow Crewneck</h3>
+            <div class="tags">
+                <span class="item-tag">Crewneck</span>
+                <span class="item-tag">Colorful</span>
+                <span class="item-tag">Rainbow</span>
+            </div>
+            <p class="price">$20</p>
+
+            <select>
+                <option disabled selected>Select Size</option>
+                <option>M (1 available)</option>
+            </select>
+
+            <!-- Square Payment Section -->
+            <div class="purchase-section" style="margin-top: 15px; padding-top: 15px; border-top: 1px dashed var(--secondary-pink);">
+                <a href="https://longdogechallenge.com/" style="text-decoration: none;">
+                    <button class="square-purchase-btn" style="width: 100%; padding: 12px; background: var(--primary-pink); color: white; border: none; border-radius: 10px; font-weight: 600; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                        <i class="fas fa-shopping-cart"></i> Purchase via Square
+                    </button>
+                </a>
+                <p style="font-size: 0.8rem; color: var(--dark-text); text-align: center; margin-top: 8px;">
+                    <i class="fas fa-heart" style="color: var(--primary-pink);"></i> All proceeds support our philanthropy
+                </p>
+            </div>
+
+            <p>
+                White Phi Rho Crewneck with multicolored lines above.
+                Bright rainbow accents on classic white crewneck.
+            </p>
+        </div>
+    </div>
+
+    <!-- ===== MERCH ITEM #23 ===== -->
+    <div class="merch-card" data-type="tee" data-sizes="M,L" data-images='["images/sparkleLetter.png"]'>
+        <div class="favorite">
+            <i class="far fa-heart"></i>
+        </div>
+        <div class="image-container">
+            <img src="images/sparkleLetter.png" alt="Sparkle Letter Phi Rho Tee" />
+            <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
+            <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
+        </div>
+
+        <div class="merch-info">
+            <h3>Sparkle Letter Phi Rho Tee</h3>
+            <div class="tags">
+                <span class="item-tag">Tee</span>
+                <span class="item-tag">Sparkle</span>
+                <span class="item-tag">Applique</span>
+            </div>
+            <p class="price">$15</p>
+
+            <select>
+                <option disabled selected>Select Size</option>
+                <option>M (5 available)</option>
+                <option>L (1 available)</option>
+            </select>
+
+            <!-- Square Payment Section -->
+            <div class="purchase-section" style="margin-top: 15px; padding-top: 15px; border-top: 1px dashed var(--secondary-pink);">
+                <a href="https://longdogechallenge.com/" style="text-decoration: none;">
+                    <button class="square-purchase-btn" style="width: 100%; padding: 12px; background: var(--primary-pink); color: white; border: none; border-radius: 10px; font-weight: 600; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                        <i class="fas fa-shopping-cart"></i> Purchase via Square
+                    </button>
+                </a>
+                <p style="font-size: 0.8rem; color: var(--dark-text); text-align: center; margin-top: 8px;">
+                    <i class="fas fa-heart" style="color: var(--primary-pink);"></i> All proceeds support our philanthropy
+                </p>
+            </div>
+
+            <p>
+                Silver Sparkle Applique Letter Phi Rho T-shirt.
+                Shimmery silver letters that catch the light beautifully.
+            </p>
+        </div>
+    </div>
+
+</div>
 
         <!-- ========== FOOTER ========== -->
         <footer>
